@@ -1,0 +1,53 @@
+{
+  "leis": {
+    "LGPD": {
+      "artigos": 75,
+      "revogados_excluidos": 0
+    },
+    "Marco Civil": {
+      "artigos": 33,
+      "revogados_excluidos": 0
+    },
+    "LAI": {
+      "artigos": 47,
+      "revogados_excluidos": 0
+    },
+    "Lei 14.133": {
+      "artigos": 206,
+      "revogados_excluidos": 0
+    },
+    "CDC": {
+      "artigos": 122,
+      "revogados_excluidos": 0
+    }
+  },
+  "chunks_indexados": 483,
+  "vocabulario": 5976,
+  "fontes": [
+    {
+      "lei": "LGPD",
+      "numero": "13.709/2018",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+    },
+    {
+      "lei": "Marco Civil",
+      "numero": "12.965/2014",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
+    },
+    {
+      "lei": "LAI",
+      "numero": "12.527/2011",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+    },
+    {
+      "lei": "Lei 14.133",
+      "numero": "14.133/2021",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/L14133.htm"
+    },
+    {
+      "lei": "CDC",
+      "numero": "8.078/1990",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+    }
+  ]
+}

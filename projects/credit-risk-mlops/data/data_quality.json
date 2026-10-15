@@ -1,0 +1,20 @@
+{
+  "n_rows_raw": 30000,
+  "n_duplicated_rows_kept": 35,
+  "education_undocumented_to_4": {
+    "0": 14,
+    "5": 280,
+    "6": 51
+  },
+  "marriage_undocumented_to_3": {
+    "0": 54
+  },
+  "pay_status_values_not_in_documentation": {
+    "-2": 24415,
+    "0": 95919
+  },
+  "n_missing_values": 0,
+  "default_rate": 0.2212,
+  "source_zip_sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+  "dataset_fingerprint_sha256": "439c136d63ab89137363590736dd056d2ce1dbd1814f6f9b8809529cfee6ed6d"
+}

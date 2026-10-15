@@ -1,0 +1,22 @@
+[
+ {"id": "q01", "question": "Quais são as hipóteses que autorizam o tratamento de dados pessoais?", "expected": ["lgpd-art7"]},
+ {"id": "q02", "question": "O que a lei define como dado pessoal sensível?", "expected": ["lgpd-art5"]},
+ {"id": "q03", "question": "Quais são os princípios que devem orientar o tratamento de dados pessoais?", "expected": ["lgpd-art6"]},
+ {"id": "q04", "question": "Quando é obrigatória a comunicação à autoridade nacional sobre incidente de segurança com dados pessoais?", "expected": ["lgpd-art48"]},
+ {"id": "q05", "question": "Por quanto tempo o provedor de conexão deve manter os registros de conexão à internet?", "expected": ["marco-civil-art13"]},
+ {"id": "q06", "question": "Em que situação o provedor de aplicações pode ser responsabilizado por conteúdo gerado por terceiros?", "expected": ["marco-civil-art19"]},
+ {"id": "q07", "question": "O que é neutralidade de rede?", "expected": ["marco-civil-art9"]},
+ {"id": "q08", "question": "Qual é o prazo para o órgão público responder a um pedido de acesso à informação?", "expected": ["lai-art11"]},
+ {"id": "q09", "question": "Por quanto tempo pode durar o sigilo de informação classificada como ultrassecreta?", "expected": ["lai-art24"]},
+ {"id": "q10", "question": "Qual é o prazo para apresentar recurso contra a negativa de acesso à informação?", "expected": ["lai-art15"]},
+ {"id": "q11", "question": "Quais são as modalidades de licitação previstas na lei de licitações?", "expected": ["licitacoes-art28"]},
+ {"id": "q12", "question": "Quais são os critérios de julgamento das propostas em uma licitação?", "expected": ["licitacoes-art33"]},
+ {"id": "q13", "question": "Em que hipóteses a contratação pode ser feita por inexigibilidade de licitação?", "expected": ["licitacoes-art74"]},
+ {"id": "q14", "question": "Qual é o prazo de vigência dos contratos administrativos?", "expected": ["licitacoes-art105"]},
+ {"id": "q15", "question": "Qual é o prazo para o consumidor desistir de uma compra feita fora do estabelecimento comercial?", "expected": ["cdc-art49"]},
+ {"id": "q16", "question": "Quem é considerado consumidor pelo Código de Defesa do Consumidor?", "expected": ["cdc-art2"]},
+ {"id": "q17", "question": "O que é considerado prática abusiva na relação de consumo?", "expected": ["cdc-art39"]},
+ {"id": "q18", "question": "Quais são os direitos básicos do consumidor?", "expected": ["cdc-art6"]},
+ {"id": "q19", "question": "Qual é o prazo de garantia legal para produtos e serviços não duráveis?", "expected": ["cdc-art26"]},
+ {"id": "q20", "question": "Quais cláusulas contratuais são consideradas abusivas?", "expected": ["cdc-art51"]}
+]

@@ -1,0 +1,96 @@
+{
+  "note": "Lookup online após materialize(): valor mais recente materializado por entidade (não há tempo de consulta).",
+  "materialized_until": "2024-05-13 08:04:20.544069",
+  "examples": [
+    {
+      "entity": {
+        "customer_id": 2381,
+        "product_id": 307,
+        "department_id": 12
+      },
+      "features": {
+        "n_items_total": 50.0,
+        "avg_days_between_orders": 10.28551259927662,
+        "reorder_ratio": 0.24,
+        "avg_basket_size": 4.545454545454546,
+        "n_orders": 11.0,
+        "dept_share": 0.18,
+        "dept_purchases": 9.0,
+        "prev_purchase_gap_days": 0.0,
+        "times_bought": 1.0
+      }
+    },
+    {
+      "entity": {
+        "customer_id": 2316,
+        "product_id": 19,
+        "department_id": 14
+      },
+      "features": {
+        "n_items_total": 55.0,
+        "avg_days_between_orders": 12.881861396141977,
+        "reorder_ratio": 0.23636363636363636,
+        "avg_basket_size": 4.230769230769231,
+        "n_orders": 13.0,
+        "dept_share": 0.07272727272727272,
+        "dept_purchases": 4.0,
+        "prev_purchase_gap_days": 0.0,
+        "times_bought": 1.0
+      }
+    },
+    {
+      "entity": {
+        "customer_id": 2764,
+        "product_id": 1157,
+        "department_id": 5
+      },
+      "features": {
+        "n_items_total": 28.0,
+        "avg_days_between_orders": 13.60176025562307,
+        "reorder_ratio": 0.25,
+        "avg_basket_size": 4.0,
+        "n_orders": 7.0,
+        "dept_share": 0.03571428571428571,
+        "dept_purchases": 1.0,
+        "prev_purchase_gap_days": 0.0,
+        "times_bought": 1.0
+      }
+    },
+    {
+      "entity": {
+        "customer_id": 2285,
+        "product_id": 1703,
+        "department_id": 2
+      },
+      "features": {
+        "n_items_total": 38.0,
+        "avg_days_between_orders": 11.257934832415675,
+        "reorder_ratio": 0.21052631578947367,
+        "avg_basket_size": 4.75,
+        "n_orders": 8.0,
+        "dept_share": 0.10526315789473684,
+        "dept_purchases": 4.0,
+        "prev_purchase_gap_days": 0.0,
+        "times_bought": 1.0
+      }
+    },
+    {
+      "entity": {
+        "customer_id": 2040,
+        "product_id": 973,
+        "department_id": 2
+      },
+      "features": {
+        "n_items_total": 20.0,
+        "avg_days_between_orders": 10.658046968570602,
+        "reorder_ratio": 0.15,
+        "avg_basket_size": 4.0,
+        "n_orders": 5.0,
+        "dept_share": 0.2,
+        "dept_purchases": 4.0,
+        "prev_purchase_gap_days": 0.0,
+        "times_bought": 1.0
+      }
+    }
+  ]
+}

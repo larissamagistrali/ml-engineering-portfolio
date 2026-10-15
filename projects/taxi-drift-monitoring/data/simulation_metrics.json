@@ -1,0 +1,37 @@
+{
+  "label": "SIMULAÇÃO: entradas perturbadas de forma controlada; não representa mudança real observada",
+  "base_month": "2024-06",
+  "share_perturbed": 0.3,
+  "psi_by_feature": [
+    {
+      "feature": "trip_distance",
+      "psi": 0.0341
+    },
+    {
+      "feature": "passenger_count",
+      "psi": 0.0001
+    },
+    {
+      "feature": "pickup_hour",
+      "psi": 0.0378
+    },
+    {
+      "feature": "pickup_dow",
+      "psi": 0.0169
+    },
+    {
+      "feature": "pu_borough",
+      "psi": 0.0016
+    },
+    {
+      "feature": "do_borough",
+      "psi": 0.0013
+    },
+    {
+      "feature": "payment_type",
+      "psi": 0.0201
+    }
+  ],
+  "mae_real": 4.285609722527794,
+  "mae_with_perturbed_inputs": 4.665098407822696
+}

@@ -1,0 +1,2 @@
+# Pipeline do corpus (coleta, BM25). O modo LLM usa o SDK `anthropic`, que já está no requirements.txt raiz.
+numpy>=1.26

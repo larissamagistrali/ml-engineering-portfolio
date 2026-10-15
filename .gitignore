@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Segredos
+.env
+.streamlit/secrets.toml
+
+# Dados brutos/grandes ficam fora do Git; só amostras em projects/*/data/*.parquet
+projects/*/data/raw/
+projects/*/data/external/
+projects/*/data/*.csv
+*.log
+projects/*/data/work/
+projects/*/data/reports/
+projects/*/mlruns/
+projects/feature-store/feature_repo/data/
+projects/credit-risk-mlops/data/credit_default.parquet

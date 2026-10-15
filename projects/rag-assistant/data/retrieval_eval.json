@@ -1,0 +1,393 @@
+{
+  "metrics": {
+    "n_questions": 20,
+    "k": 5,
+    "hit@1": 0.5,
+    "hit@3": 0.65,
+    "hit@5": 0.8,
+    "mrr@5": 0.5992
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "question": "Quais são as hipóteses que autorizam o tratamento de dados pessoais?",
+      "expected": [
+        "lgpd-art7"
+      ],
+      "top_ids": [
+        "marco-civil-art7",
+        "lgpd-art7",
+        "lgpd-art11",
+        "lgpd-art15",
+        "lgpd-art6"
+      ],
+      "rank": 2,
+      "hit1": false,
+      "hit3": true,
+      "hit5": true,
+      "rr": 0.5
+    },
+    {
+      "id": "q02",
+      "question": "O que a lei define como dado pessoal sensível?",
+      "expected": [
+        "lgpd-art5"
+      ],
+      "top_ids": [
+        "lgpd-art5",
+        "marco-civil-art16",
+        "licitacoes-art145",
+        "licitacoes-art337n",
+        "licitacoes-art149"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q03",
+      "question": "Quais são os princípios que devem orientar o tratamento de dados pessoais?",
+      "expected": [
+        "lgpd-art6"
+      ],
+      "top_ids": [
+        "lgpd-art6",
+        "lgpd-art41",
+        "lgpd-art7",
+        "lgpd-art49",
+        "lgpd-art46"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q04",
+      "question": "Quando é obrigatória a comunicação à autoridade nacional sobre incidente de segurança com dados pessoais?",
+      "expected": [
+        "lgpd-art48"
+      ],
+      "top_ids": [
+        "lgpd-art48",
+        "lgpd-art30",
+        "lgpd-art5",
+        "lgpd-art27",
+        "lgpd-art46"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q05",
+      "question": "Por quanto tempo o provedor de conexão deve manter os registros de conexão à internet?",
+      "expected": [
+        "marco-civil-art13"
+      ],
+      "top_ids": [
+        "marco-civil-art13",
+        "marco-civil-art15",
+        "marco-civil-art18",
+        "marco-civil-art14",
+        "marco-civil-art7"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q06",
+      "question": "Em que situação o provedor de aplicações pode ser responsabilizado por conteúdo gerado por terceiros?",
+      "expected": [
+        "marco-civil-art19"
+      ],
+      "top_ids": [
+        "marco-civil-art18",
+        "marco-civil-art21",
+        "marco-civil-art31",
+        "marco-civil-art19",
+        "marco-civil-art17"
+      ],
+      "rank": 4,
+      "hit1": false,
+      "hit3": false,
+      "hit5": true,
+      "rr": 0.25
+    },
+    {
+      "id": "q07",
+      "question": "O que é neutralidade de rede?",
+      "expected": [
+        "marco-civil-art9"
+      ],
+      "top_ids": [
+        "marco-civil-art3",
+        "marco-civil-art2",
+        "marco-civil-art24",
+        "marco-civil-art5",
+        "marco-civil-art9"
+      ],
+      "rank": 5,
+      "hit1": false,
+      "hit3": false,
+      "hit5": true,
+      "rr": 0.2
+    },
+    {
+      "id": "q08",
+      "question": "Qual é o prazo para o órgão público responder a um pedido de acesso à informação?",
+      "expected": [
+        "lai-art11"
+      ],
+      "top_ids": [
+        "lai-art11",
+        "lai-art16",
+        "lai-art10",
+        "lai-art9",
+        "lai-art32"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q09",
+      "question": "Por quanto tempo pode durar o sigilo de informação classificada como ultrassecreta?",
+      "expected": [
+        "lai-art24"
+      ],
+      "top_ids": [
+        "lai-art24",
+        "lai-art35",
+        "lai-art28",
+        "lai-art25",
+        "lai-art27"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q10",
+      "question": "Qual é o prazo para apresentar recurso contra a negativa de acesso à informação?",
+      "expected": [
+        "lai-art15"
+      ],
+      "top_ids": [
+        "lai-art15",
+        "lai-art16",
+        "lai-art11",
+        "lai-art25",
+        "lai-art7"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q11",
+      "question": "Quais são as modalidades de licitação previstas na lei de licitações?",
+      "expected": [
+        "licitacoes-art28"
+      ],
+      "top_ids": [
+        "licitacoes-art28",
+        "licitacoes-art27",
+        "licitacoes-art78",
+        "licitacoes-art4",
+        "licitacoes-art58"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q12",
+      "question": "Quais são os critérios de julgamento das propostas em uma licitação?",
+      "expected": [
+        "licitacoes-art33"
+      ],
+      "top_ids": [
+        "licitacoes-art55",
+        "licitacoes-art33",
+        "licitacoes-art36",
+        "licitacoes-art56",
+        "licitacoes-art78"
+      ],
+      "rank": 2,
+      "hit1": false,
+      "hit3": true,
+      "hit5": true,
+      "rr": 0.5
+    },
+    {
+      "id": "q13",
+      "question": "Em que hipóteses a contratação pode ser feita por inexigibilidade de licitação?",
+      "expected": [
+        "licitacoes-art74"
+      ],
+      "top_ids": [
+        "licitacoes-art73",
+        "licitacoes-art337e",
+        "licitacoes-art82",
+        "licitacoes-art150",
+        "licitacoes-art72"
+      ],
+      "rank": null,
+      "hit1": false,
+      "hit3": false,
+      "hit5": false,
+      "rr": 0.0
+    },
+    {
+      "id": "q14",
+      "question": "Qual é o prazo de vigência dos contratos administrativos?",
+      "expected": [
+        "licitacoes-art105"
+      ],
+      "top_ids": [
+        "licitacoes-art178",
+        "licitacoes-art109",
+        "licitacoes-art97",
+        "licitacoes-art91",
+        "licitacoes-art105"
+      ],
+      "rank": 5,
+      "hit1": false,
+      "hit3": false,
+      "hit5": true,
+      "rr": 0.2
+    },
+    {
+      "id": "q15",
+      "question": "Qual é o prazo para o consumidor desistir de uma compra feita fora do estabelecimento comercial?",
+      "expected": [
+        "cdc-art49"
+      ],
+      "top_ids": [
+        "cdc-art49",
+        "cdc-art54g",
+        "lgpd-art48",
+        "cdc-art33",
+        "cdc-art56"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q16",
+      "question": "Quem é considerado consumidor pelo Código de Defesa do Consumidor?",
+      "expected": [
+        "cdc-art2"
+      ],
+      "top_ids": [
+        "cdc-art117",
+        "cdc-art1",
+        "cdc-art104c",
+        "cdc-art80",
+        "cdc-art44"
+      ],
+      "rank": null,
+      "hit1": false,
+      "hit3": false,
+      "hit5": false,
+      "rr": 0.0
+    },
+    {
+      "id": "q17",
+      "question": "O que é considerado prática abusiva na relação de consumo?",
+      "expected": [
+        "cdc-art39"
+      ],
+      "top_ids": [
+        "cdc-art60",
+        "licitacoes-art160",
+        "cdc-art59",
+        "cdc-art67",
+        "cdc-art37"
+      ],
+      "rank": null,
+      "hit1": false,
+      "hit3": false,
+      "hit5": false,
+      "rr": 0.0
+    },
+    {
+      "id": "q18",
+      "question": "Quais são os direitos básicos do consumidor?",
+      "expected": [
+        "cdc-art6"
+      ],
+      "top_ids": [
+        "cdc-art5",
+        "cdc-art51",
+        "cdc-art6",
+        "cdc-art83",
+        "lgpd-art1"
+      ],
+      "rank": 3,
+      "hit1": false,
+      "hit3": true,
+      "hit5": true,
+      "rr": 0.3333333333333333
+    },
+    {
+      "id": "q19",
+      "question": "Qual é o prazo de garantia legal para produtos e serviços não duráveis?",
+      "expected": [
+        "cdc-art26"
+      ],
+      "top_ids": [
+        "cdc-art26",
+        "cdc-art18",
+        "cdc-art53",
+        "cdc-art50",
+        "cdc-art39"
+      ],
+      "rank": 1,
+      "hit1": true,
+      "hit3": true,
+      "hit5": true,
+      "rr": 1.0
+    },
+    {
+      "id": "q20",
+      "question": "Quais cláusulas contratuais são consideradas abusivas?",
+      "expected": [
+        "cdc-art51"
+      ],
+      "top_ids": [
+        "marco-civil-art8",
+        "cdc-art47",
+        "cdc-art6",
+        "cdc-art50",
+        "lgpd-art35"
+      ],
+      "rank": null,
+      "hit1": false,
+      "hit3": false,
+      "hit5": false,
+      "rr": 0.0
+    }
+  ],
+  "note": "Perguntas e artigos esperados escritos à mão e validados contra o texto oficial (corpus/retrieval_questions.json)."
+}

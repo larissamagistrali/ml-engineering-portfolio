@@ -1,0 +1,9 @@
+# Dependências da API (inferência). Treino/MLflow ficam fora da imagem.
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.6
+lightgbm>=4.3
+scikit-learn>=1.4
+pandas>=2.2
+numpy>=1.26
+joblib>=1.3

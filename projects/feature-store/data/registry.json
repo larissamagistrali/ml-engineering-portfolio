@@ -1,0 +1,142 @@
+{
+  "project": "feature_store_demo",
+  "entities": [
+    {
+      "name": "product",
+      "join_key": "product_id",
+      "value_type": "INT64"
+    },
+    {
+      "name": "department",
+      "join_key": "department_id",
+      "value_type": "INT64"
+    },
+    {
+      "name": "customer",
+      "join_key": "customer_id",
+      "value_type": "INT64"
+    }
+  ],
+  "feature_views": [
+    {
+      "name": "customer_product_history",
+      "entities": [
+        "customer",
+        "product"
+      ],
+      "join_keys": [
+        "customer_id",
+        "product_id"
+      ],
+      "ttl_days": 3650,
+      "source_file": "customer_product_history.parquet",
+      "timestamp_field": "event_timestamp",
+      "created_timestamp_column": "created_timestamp",
+      "description": "Histórico de compra do cliente por produto (muda só quando o produto é comprado).",
+      "features": [
+        {
+          "name": "times_bought",
+          "dtype": "Int64",
+          "description": "Vezes que o cliente comprou o produto até o momento"
+        },
+        {
+          "name": "prev_purchase_gap_days",
+          "dtype": "Float64",
+          "description": "Dias entre as duas últimas compras do produto"
+        }
+      ]
+    },
+    {
+      "name": "customer_department_affinity",
+      "entities": [
+        "customer",
+        "department"
+      ],
+      "join_keys": [
+        "customer_id",
+        "department_id"
+      ],
+      "ttl_days": 3650,
+      "source_file": "customer_department_affinity.parquet",
+      "timestamp_field": "event_timestamp",
+      "created_timestamp_column": "created_timestamp",
+      "description": "Afinidade do cliente por departamento (estado após cada pedido).",
+      "features": [
+        {
+          "name": "dept_purchases",
+          "dtype": "Int64",
+          "description": "Itens do departamento até o momento"
+        },
+        {
+          "name": "dept_share",
+          "dtype": "Float64",
+          "description": "Participação do departamento nos itens do cliente"
+        }
+      ]
+    },
+    {
+      "name": "customer_order_stats",
+      "entities": [
+        "customer"
+      ],
+      "join_keys": [
+        "customer_id"
+      ],
+      "ttl_days": 3650,
+      "source_file": "customer_order_stats.parquet",
+      "timestamp_field": "event_timestamp",
+      "created_timestamp_column": "created_timestamp",
+      "description": "Estatísticas de pedidos do cliente (estado após cada pedido).",
+      "features": [
+        {
+          "name": "n_orders",
+          "dtype": "Int64",
+          "description": "Pedidos do cliente até o momento"
+        },
+        {
+          "name": "n_items_total",
+          "dtype": "Int64",
+          "description": "Itens comprados até o momento"
+        },
+        {
+          "name": "avg_basket_size",
+          "dtype": "Float64",
+          "description": "Itens por pedido"
+        },
+        {
+          "name": "avg_days_between_orders",
+          "dtype": "Float64",
+          "description": "Intervalo médio entre pedidos (dias)"
+        },
+        {
+          "name": "reorder_ratio",
+          "dtype": "Float64",
+          "description": "Fração de itens que são recompras"
+        }
+      ]
+    }
+  ],
+  "feature_services": [
+    {
+      "name": "recompra_v1",
+      "description": "Modelo de recompra: 'o cliente compra este produto no próximo pedido?'",
+      "views": [
+        "customer_order_stats",
+        "customer_department_affinity",
+        "customer_product_history"
+      ],
+      "features": [
+        "customer_order_stats:n_orders",
+        "customer_order_stats:n_items_total",
+        "customer_order_stats:avg_basket_size",
+        "customer_order_stats:avg_days_between_orders",
+        "customer_order_stats:reorder_ratio",
+        "customer_department_affinity:dept_purchases",
+        "customer_department_affinity:dept_share",
+        "customer_product_history:times_bought",
+        "customer_product_history:prev_purchase_gap_days"
+      ]
+    }
+  ],
+  "source": "exportado via FeatureStore.list_entities / list_feature_views / list_feature_services"
+}

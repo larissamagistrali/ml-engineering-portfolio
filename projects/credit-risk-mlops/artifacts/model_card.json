@@ -1,0 +1,330 @@
+{
+  "model_name": "credit-risk-pd",
+  "model_version": "credit-risk-pd:v2",
+  "algorithm": "lightgbm",
+  "task": "classificação binária: probabilidade de inadimplência no mês seguinte (PD)",
+  "registry": {
+    "backend": "mlflow (sqlite local)",
+    "alias": "champion",
+    "version": 2,
+    "run_id": "fe0be3383f7d4568b00a78e595855e22"
+  },
+  "trained_at": "2026-10-14T22:41:09Z",
+  "seed": 42,
+  "libraries": {
+    "python": "3.11.9",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1",
+    "mlflow": "3.17.1",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6"
+  },
+  "data": {
+    "name": "UCI Default of Credit Card Clients (Taiwan, 2005)",
+    "source": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+    "license": "CC BY 4.0",
+    "doi": "10.24432/C55S3H",
+    "n_rows": 30000,
+    "default_rate": 0.2212,
+    "fingerprint_sha256": "439c136d63ab89137363590736dd056d2ce1dbd1814f6f9b8809529cfee6ed6d",
+    "source_zip_sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+    "split": {
+      "strategy": "estratificado por inadimplência (o dataset não tem data da solicitação: não há corte temporal)",
+      "train": 18000,
+      "valid": 6000,
+      "test": 6000
+    }
+  },
+  "features": [
+    "limit_bal",
+    "age",
+    "education",
+    "pay_1",
+    "pay_2",
+    "pay_3",
+    "pay_4",
+    "pay_5",
+    "pay_6",
+    "bill_1",
+    "bill_2",
+    "bill_3",
+    "bill_4",
+    "bill_5",
+    "bill_6",
+    "payamt_1",
+    "payamt_2",
+    "payamt_3",
+    "payamt_4",
+    "payamt_5",
+    "payamt_6",
+    "util_1",
+    "util_mean",
+    "bill_trend",
+    "max_delay",
+    "n_delays",
+    "mean_delay",
+    "pay_ratio_1",
+    "pay_ratio_mean"
+  ],
+  "feature_set_version": "1",
+  "excluded_features": {
+    "sex": "atributo protegido",
+    "marriage": "atributo protegido"
+  },
+  "input_ranges": {
+    "limit_bal": [
+      10000,
+      1000000
+    ],
+    "age": [
+      21,
+      79
+    ],
+    "bill_amt": [
+      -339603,
+      1664089
+    ],
+    "pay_amt": [
+      0,
+      1684259
+    ]
+  },
+  "hyperparameters": {
+    "subsample": 0.7,
+    "reg_lambda": 1.0,
+    "num_leaves": 7,
+    "min_child_samples": 20,
+    "learning_rate": 0.05,
+    "colsample_bytree": 1.0
+  },
+  "n_estimators": 231,
+  "selection": {
+    "criterion": "log-loss na validação (menor é melhor); gate de promoção: ROC-AUC de validação >= baseline + 0.005 e log-loss menor que o do baseline",
+    "n_trials": 12
+  },
+  "metrics": {
+    "valid": {
+      "roc_auc": 0.7794881722850778,
+      "ks": 0.42309965488219703,
+      "pr_auc": 0.5447548011231865,
+      "brier": 0.13681612970442006,
+      "log_loss": 0.432788072827475,
+      "ece": 0.01676923175358392,
+      "mean_pd": 0.21736490150749463,
+      "observed_rate": 0.22116666666666668
+    },
+    "test": {
+      "roc_auc": 0.7920297961432792,
+      "ks": 0.44959185276220837,
+      "pr_auc": 0.5798308285111932,
+      "brier": 0.13070521331995766,
+      "log_loss": 0.4190257505349506,
+      "ece": 0.014621197727842929,
+      "mean_pd": 0.2197665504209392,
+      "observed_rate": 0.22116666666666668
+    }
+  },
+  "baseline_metrics": {
+    "valid": {
+      "roc_auc": 0.7406082755704619,
+      "ks": 0.38508589887134015,
+      "pr_auc": 0.4892042648596689,
+      "brier": 0.14401182149227532,
+      "log_loss": 0.4546682516816301,
+      "ece": 0.01226971145831698,
+      "mean_pd": 0.21811770065552213,
+      "observed_rate": 0.22116666666666668
+    },
+    "test": {
+      "roc_auc": 0.7595927380931455,
+      "ks": 0.42099646980336136,
+      "pr_auc": 0.5226473259355908,
+      "brier": 0.13875907010186803,
+      "log_loss": 0.4425979713731473,
+      "ece": 0.012137330289188076,
+      "mean_pd": 0.22047806331221198,
+      "observed_rate": 0.22116666666666668
+    }
+  },
+  "risk_bands": [
+    {
+      "band": "A",
+      "label": "Muito baixo",
+      "pd_upper_exclusive": 0.1
+    },
+    {
+      "band": "B",
+      "label": "Baixo",
+      "pd_upper_exclusive": 0.2
+    },
+    {
+      "band": "C",
+      "label": "Moderado",
+      "pd_upper_exclusive": 0.35
+    },
+    {
+      "band": "D",
+      "label": "Alto",
+      "pd_upper_exclusive": 0.55
+    },
+    {
+      "band": "E",
+      "label": "Muito alto",
+      "pd_upper_exclusive": 1.0
+    }
+  ],
+  "band_performance_test": [
+    {
+      "band": "A",
+      "n": 1887,
+      "mean_pd": 0.0657,
+      "observed": 0.0636,
+      "label": "Muito baixo",
+      "share": 0.3145
+    },
+    {
+      "band": "B",
+      "n": 2051,
+      "mean_pd": 0.1446,
+      "observed": 0.1438,
+      "label": "Baixo",
+      "share": 0.3418
+    },
+    {
+      "band": "C",
+      "n": 942,
+      "mean_pd": 0.2628,
+      "observed": 0.2537,
+      "label": "Moderado",
+      "share": 0.157
+    },
+    {
+      "band": "D",
+      "n": 495,
+      "mean_pd": 0.4261,
+      "observed": 0.4545,
+      "label": "Alto",
+      "share": 0.0825
+    },
+    {
+      "band": "E",
+      "n": 625,
+      "mean_pd": 0.7035,
+      "observed": 0.7168,
+      "label": "Muito alto",
+      "share": 0.1042
+    }
+  ],
+  "fairness_audit_test": {
+    "sexo": [
+      {
+        "group": "feminino",
+        "n": 3628,
+        "observed_default_rate": 0.2081,
+        "mean_pd": 0.2149,
+        "roc_auc": 0.7968
+      },
+      {
+        "group": "masculino",
+        "n": 2372,
+        "observed_default_rate": 0.2411,
+        "mean_pd": 0.2273,
+        "roc_auc": 0.7831
+      }
+    ],
+    "faixa_etaria": [
+      {
+        "group": "até 29",
+        "n": 1926,
+        "observed_default_rate": 0.2186,
+        "mean_pd": 0.2295,
+        "roc_auc": 0.7899
+      },
+      {
+        "group": "30 a 44",
+        "n": 2952,
+        "observed_default_rate": 0.208,
+        "mean_pd": 0.2053,
+        "roc_auc": 0.7948
+      },
+      {
+        "group": "45+",
+        "n": 1122,
+        "observed_default_rate": 0.2602,
+        "mean_pd": 0.241,
+        "roc_auc": 0.7853
+      }
+    ]
+  },
+  "intended_use": "Demonstração educacional de um pipeline de ML em produção (treino, registro, serving, monitoramento).",
+  "out_of_scope": "Qualquer decisão real de crédito. O dataset é de 2005 e de um único emissor em Taiwan.",
+  "limitations": [
+    "Dados de um único emissor/país/período (abr-set/2005): sem garantia de validade em outros contextos.",
+    "Sem data de solicitação: a avaliação é estratificada, não fora do tempo (tende a ser otimista).",
+    "Só clientes que receberam crédito aparecem nos dados (viés de seleção; sem inferência de rejeitados).",
+    "Idade e escolaridade entram no modelo e podem atuar como proxies; sexo e estado civil foram excluídos.",
+    "Probabilidades não foram recalibradas depois do treino; ver ECE e a curva de calibração."
+  ],
+  "global_importance_test": [
+    {
+      "feature": "max_delay",
+      "mean_abs_logit_contribution": 0.40741
+    },
+    {
+      "feature": "pay_1",
+      "mean_abs_logit_contribution": 0.26153
+    },
+    {
+      "feature": "mean_delay",
+      "mean_abs_logit_contribution": 0.11351
+    },
+    {
+      "feature": "util_1",
+      "mean_abs_logit_contribution": 0.10998
+    },
+    {
+      "feature": "payamt_2",
+      "mean_abs_logit_contribution": 0.0982
+    },
+    {
+      "feature": "bill_1",
+      "mean_abs_logit_contribution": 0.09644
+    },
+    {
+      "feature": "payamt_1",
+      "mean_abs_logit_contribution": 0.08716
+    },
+    {
+      "feature": "limit_bal",
+      "mean_abs_logit_contribution": 0.08394
+    },
+    {
+      "feature": "util_mean",
+      "mean_abs_logit_contribution": 0.07098
+    },
+    {
+      "feature": "payamt_3",
+      "mean_abs_logit_contribution": 0.06257
+    },
+    {
+      "feature": "bill_trend",
+      "mean_abs_logit_contribution": 0.06133
+    },
+    {
+      "feature": "payamt_6",
+      "mean_abs_logit_contribution": 0.05136
+    },
+    {
+      "feature": "pay_ratio_mean",
+      "mean_abs_logit_contribution": 0.05086
+    },
+    {
+      "feature": "bill_5",
+      "mean_abs_logit_contribution": 0.04463
+    },
+    {
+      "feature": "age",
+      "mean_abs_logit_contribution": 0.04417
+    }
+  ]
+}

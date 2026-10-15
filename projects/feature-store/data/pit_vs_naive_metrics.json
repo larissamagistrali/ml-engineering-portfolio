@@ -1,0 +1,35 @@
+{
+  "service": "recompra_v1",
+  "label_definition": "compra do produto no pedido seguinte (k+1), features do pedido k",
+  "n_rows": 60000,
+  "label_rate": 0.0628,
+  "auc": {
+    "point_in_time": {
+      "roc_auc_teste": 0.602,
+      "pr_auc_teste": 0.0874,
+      "n_treino": 42000,
+      "n_teste": 18000
+    },
+    "ingenuo": {
+      "roc_auc_teste": 0.892,
+      "pr_auc_teste": 0.2593,
+      "n_treino": 42000,
+      "n_teste": 18000
+    }
+  },
+  "auc_gap_roc": 0.29,
+  "auc_gap_pr": 0.1719,
+  "leakage": {
+    "share_rows_different_value": {
+      "n_orders": 1.0,
+      "n_items_total": 1.0,
+      "times_bought": 0.1971,
+      "dept_purchases": 0.6048
+    },
+    "mean_n_orders_pit": 6.418,
+    "mean_n_orders_ingenuo": 10.374,
+    "mean_times_bought_pit": 1.189,
+    "mean_times_bought_ingenuo": 1.441
+  },
+  "data_kind": "synthetic (schema Instacart; valores gerados, não reais)"
+}
